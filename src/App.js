@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Signup from './authentication/Signup';
 
 function App() {
   // write a function for the button click
@@ -7,9 +8,9 @@ function App() {
     console.log('Button clicked');
   }
   return (
-    <div className="App">
-      <button onClick={handleClick}>Click me</button>
-    </div>
+    <>
+      <Signup/>
+    </>
   );
 }
 

@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+/* Common */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Signup */
+
+.sign-up {
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sign-up .row {
+  height: 100%;
+}
+
+.sign-up .slider-sec {
+  background: linear-gradient(to right, #028f68, #087153);
+  padding: 40px;
+}
+
+.sign-up .slider-sec img.logo {
+  width: 190px;
+}
+
+.slider-container {
+  height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.slider-container .slick-slider {
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slider-container .slick-slider .item {
+  text-align: center;
+  padding: 20px;
+}
+
+.slider-container .slick-slider .item img {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  margin-bottom: 30px;
+}
+
+.slider-container .slick-slider .slick-slide>div:focus-visible {
+  outline: none;
+}
+
+.slider-container .slick-slider .item .title {
+  font-size: 26px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.slider-container .slick-slider .item .desc {
+  font-size: 14px;
+  color: #f4f4f4;
+  margin-bottom: 20px;
+  padding: 0 40px;
+  font-weight: 400;
+}
+
+.slider-container .slick-slider .slick-dots li {
+  width: 10px;
+  height: 10px;
+}
+
+.slider-container .slick-slider .slick-dots li button:before {
+  width: 10px;
+  height: 10px;
+  content: '';
+  border: 1px solid #fff;
+  opacity: 1;
+  border-radius: 100%;
+}
+
+.slider-container .slick-slider .slick-dots li.slick-active button:before {
+  background: #fff;
+}
+
+.sign-login-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sign-login-section .main-div {
+  text-align: center;
+  width: 50%;
+}
+
+.sign-login-section .main-div .title {
+  font-size: 28px;
+  color: #343E3C;
+  font-weight: 500;
+}
+
+.sign-login-section .main-div .desc {
+  font-size: 14px;
+  color: #43536D;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.sign-login-section .main-div form .form-group input {
+  margin-bottom: 20px;
+  border-color: #d6e3e9;
+  border-radius: 3px;
+}
+
+.sign-login-section .main-div form .form-group input::placeholder {
+  color: #697D8E;
+  font-weight: 500;
+}
+
+.sign-login-section .main-div form .form-group input:focus {
+  box-shadow: 0 0 0 0.25rem #08735562;
+}
+
+.sign-login-section .main-div form button {
+  width: 100%;
+  background-color: #028d67;
+  font-weight: 500;
+  border-radius: 2px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.sign-login-section .main-div form button:hover {
+  background-color: #087153;
+}
+
+.sign-login-section .centered-line-or {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sign-login-section .centered-line-or:before, .sign-login-section .centered-line-or:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 1px;
+  background-color: #DEDEDE;
+}
+
+.sign-login-section .centered-line-or:before {
+  right: 54%;
+  margin-right: 15px;
+}
+
+.sign-login-section .centered-line-or:after {
+  left: 54%;
+  margin-left: 15px;
+}
+
+.sign-login-section .centered-line-or span {
+  display: inline-block;
+  position: relative;
+}
+
+.sign-login-section .google-btn {
+  background-color: #faf9f9;
+  color: #435361;
+  border-radius: 3px;
+  border: 1px solid #a8b8c0;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.sign-login-section .google-btn img {
+  margin-right: 8px;
+}
+
+.sign-login-section .login-section p{
+  color: #43536D;
+  font-size: 14px;
+}
+
+.sign-login-section .login-section p a {
+  color: #067E5D;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.sign-login-section .links {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+}
+
+.sign-login-section .links a {
+  color: #71829C;
+  font-size: 14px;
+  margin-right: 15px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.sign-login-section .links a:hover {
+  color: #087153;
 }
