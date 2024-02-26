@@ -7,9 +7,30 @@
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   overflow-x: hidden;
 }
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Main App */
 
 /* Signup */
 
@@ -153,7 +174,8 @@ body {
   font-weight: 500;
 }
 
-.sign-login-section .centered-line-or:before, .sign-login-section .centered-line-or:after {
+.sign-login-section .centered-line-or:before,
+.sign-login-section .centered-line-or:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -196,7 +218,7 @@ body {
   margin-right: 8px;
 }
 
-.sign-login-section .login-section p{
+.sign-login-section .login-section p {
   color: #43536D;
   font-size: 14px;
 }
@@ -223,4 +245,221 @@ body {
 
 .sign-login-section .links a:hover {
   color: #087153;
+}
+
+/* Side Bar */
+
+.side-bar {
+  width: 240px;
+  background-color: #fcfffe;
+  padding: 15px;
+  height: 100vh;
+  border-right: 2px solid #c8d8df;
+}
+
+.side-bar .logo {
+  width: 190px;
+}
+
+.nav-section {
+  margin-top: 50px;
+}
+
+.nav-section h4 {
+  color: #4E5C59;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav-section .nav-dropdown-toggle {
+  background: none;
+  border: none;
+  color: #343E3C;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.nav-section .nav-dropdown-toggle .monitor {
+  color: #7F97A9;
+  width: 20px;
+  height: 20px;
+  margin: 0 8px 0 0;
+}
+
+.nav-section .nav-dropdown-toggle .arrow {
+  color: #124335;
+}
+
+.nav-section .nav-main {
+  padding: 10px 0;
+}
+
+.nav-dropdown-menu {
+  padding-left: 26px;
+  margin-top: 6px;
+}
+
+.nav-section .nav-dropdown-menu .nav-dropdown-item {
+  color: #43536D;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.nav-section .nav-dropdown-menu .nav-dropdown-item:hover,
+.nav-section .nav-dropdown-menu .nav-dropdown-item.active {
+  color: #124335;
+  background-color: #DDEDE9;
+  border-radius: 5px;
+}
+
+.nav-section .bottom-nav-main {
+  position: absolute;
+  bottom: 20px;
+}
+
+.nav-section .bottom-nav-main .nav-main {
+  padding: 5px 0;
+}
+
+/* Header */
+
+.header {
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #c8d8df;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.header .title {
+  font-size: 24px;
+  color: #343E3C;
+  font-weight: 600;
+  margin-bottom: 0
+}
+
+.header .search-container {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.header .search-container input {
+  width: 100%;
+  padding: 5px 5px 5px 35px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  background-color: #f5f7f9;
+}
+
+.header .search-container input::placeholder {
+  color: #697D8E;
+  font-weight: 500;
+}
+
+.header .search-container .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #697D8E;
+}
+
+.header .header-right .assign-task {
+  background-color: #028f68;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  border: none;
+}
+
+.header .header-right .assign-task:hover {
+  background-color: #087153;
+}
+
+.header .header-right .assign-task .icon {
+  font-size: 20px;
+  margin-right: 4px;
+}
+
+.header .header-right .assign-task.team {
+  background-color: transparent;
+  color: #343E3C;
+  border: 1px solid #697D8E;
+  padding: 5px 10px;
+}
+
+.header .header-right .assign-task.team:hover {
+  background-color: #f5f7f9;
+}
+
+.header .header-right .assign-task.team .icon {
+  color: #343E3C;
+  font-size: 24px;
+}
+
+.header .header-right .notifications {
+  position: relative;
+}
+
+.header .header-right .notifications .icon {
+  color: #7F97A9;
+  font-size: 34px;
+  transform: rotate(342deg);
+}
+
+.header .header-right .notifications .num {
+  position: absolute;
+  top: 0;
+  background-color: red;
+  color: white;
+  right: 0;
+  font-size: 9px;
+  border-radius: 100%;
+  height: 18px;
+  width: 18px;
+  padding: 3px 4px;
+}
+
+.header .header-right .user-section {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.header .header-right .user-section img {
+  width: 50px;
+}
+
+.header .header-right .user-section .user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .header-right .user-section .user-info .user-name {
+  font-size: 16px;
+  color: #343E3C;
+  font-weight: 600;
+}
+
+.header .header-right .user-section .user-info .user-role {
+  font-size: 14px;
+  color: #343E3C;
+  font-weight: 400;
+}
+
+.header .header-right .user-section .icon {
+  font-size: 22px;
+  color: #8E98A0;
+  margin-top: 6px;
 }
