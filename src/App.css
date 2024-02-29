@@ -15,6 +15,10 @@ body {
   overflow-x: hidden;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 /* Animations */
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
@@ -34,6 +38,7 @@ body {
 
 .wrapper {
   width: 100%;
+  padding-left: 240px;
 }
 
 /* Signup */
@@ -259,6 +264,7 @@ body {
   padding: 15px;
   height: 100vh;
   border-right: 2px solid #c8d8df;
+  position: fixed;
 }
 
 .side-bar .logo {
@@ -468,18 +474,17 @@ body {
   margin-top: 6px;
 }
 
-/* Dashboard */
+/* =========== Dashboard ============= */
 
-.dashboard {
-  padding: 11px 20px;
-  border-bottom: 1px solid #c8d8df;
-  background-color: #fcfdff;
-}
+/* Filter Section */
 
 .dashboard .filter-sec {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #c8d8df;
+  padding: 11px 20px;
+  background-color: #fcfdff;
 }
 
 .dashboard .filter-sec .filter-tabs button {
@@ -576,4 +581,227 @@ body {
   background-color: #eaeaea;
   color: #43536D;
   border: 1px solid #e4ecf5;
+}
+
+.dashboard .filter-sec .filter-search-dropdowns .clear:hover {
+  background-color: #d6e3e9;
+}
+
+/* Records Section */
+
+.dashboard .records-sec {
+  padding: 20px;
+  display: flex;
+}
+
+.dashboard .records-sec .overall-records-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 42%;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #dae4da;
+  border-radius: 8px 0 0 8px;
+  padding: 10px;
+  gap: 10px;
+  background: linear-gradient(to right, #f6fcfa, #fefefe);
+}
+
+.dashboard .records-sec .overall-records-box .box-item {
+  width: calc(50% - 5px);
+  box-sizing: border-box;
+  display: flex;
+  border: 1px solid #dae4da;
+  border-radius: 7px;
+  padding: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dashboard .records-sec .overall-records-box .box-item:nth-child(1) {
+  background-image: url(../public/assets/images/records-bg-1.png);
+  background-color: #f7fffb;
+}
+
+.dashboard .records-sec .overall-records-box .box-item:nth-child(2) {
+  background-image: url(../public/assets/images/records-bg-2.png);
+  background-color: #fff6f6;
+}
+
+.dashboard .records-sec .overall-records-box .box-item:nth-child(3) {
+  background-image: url(../public/assets/images/records-bg-3.png);
+  background-color: #fffce7;
+}
+
+.dashboard .records-sec .overall-records-box .box-item:nth-child(4) {
+  background-image: url(../public/assets/images/records-bg-4.png);
+  background-color: #fcfcfc;
+}
+
+.dashboard .records-sec .overall-records-box .box-item .icon-div {
+  width: 40%;
+}
+
+.dashboard .records-sec .overall-records-box .box-item .icon-div .icon {
+  font-size: 42px;
+  color: #028f68;
+}
+
+.dashboard .records-sec .overall-records-box .box-item .details h4 {
+  font-size: 46px;
+  color: #343E3C;
+}
+
+.dashboard .records-sec .overall-records-box .box-item .details p {
+  font-size: 16px;
+  color: #707B8D;
+}
+
+.dashboard .records-sec .record-count {
+  width: 36%;
+  border: 1px solid #dae4da;
+  border-left: none;
+  background-color: #f8fcfb;
+}
+
+.dashboard .records-sec .record-count .title {
+  color: #343E3C;
+  font-size: 18px;
+  border-bottom: 1px solid #dae4da;
+  padding: 10px 20px;
+}
+
+.dashboard .records-sec .record-dount-graph .chart-container {
+  max-width: 200px;
+  max-height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.dashboard .records-sec .record-dount-graph .chart-container .graph-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dashboard .records-sec .record-dount-graph .chart-container .graph-text h5 {
+  font-size: 42px;
+  color: #343E3C;
+  font-weight: 600;
+}
+
+.dashboard .records-sec .record-dount-graph .chart-container .graph-text p {
+  font-size: 14px;
+  color: #707B8D;
+  font-weight: 400;
+}
+
+.dashboard .records-sec .record-count.record-dount-graph {
+  width: 22%;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Data Table */
+
+.data-table {
+  padding: 20px;
+  background-color: #fcfdff;
+  border-radius: 0 0 8px 8px;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .taskType {
+  position: relative;
+  padding-left: 8px;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .taskType::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  left: -4px;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .taskType.low::before {
+  background-color: #DB5B56;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .taskType.medium::before {
+  background-color: #EEB835;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .taskType.high::before {
+  background-color: #259850;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .progress-bar {
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .progress-bar .progress {
+  height: 5px;
+  line-height: 50px;
+  color: #fff;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .progress-bar .progress.low {
+  background-color: #f1666c;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .progress-bar .progress.medium {
+  background-color: #ecc769;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .progress-bar .progress.high {
+  background-color: #7bc096;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .priorty {
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .priorty.Low {
+  background-color: #ffe3e2;
+  color: #BC342F;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .priorty.Medium {
+  background-color: #FFEFB4;
+  color: #92592F;
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-virtualScroller .priorty.High {
+  background-color: #DCEDC8;
+  color: #528911;
+}
+
+.data-table .title {
+  color: #6F7776;
+  font-size: 16px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.data-table .title::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #259850;
+  margin: 10px 0;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 100%;
 }
