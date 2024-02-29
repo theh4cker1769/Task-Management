@@ -14,8 +14,8 @@ const Header = () => {
         <header className='header'>
             <h2 className='title'>Dashboard</h2>
             <div className="header-right d-flex gap-2 align-items-center">
-                <form class="search-container" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" />
+                <form className="search-container" role="search">
+                    <input className="form-control me-2" type="search" placeholder="Search..." aria-label="Search" />
                     <FiSearch className='search-icon' />
                 </form>
                 <button className='assign-task'> <FaCirclePlus className='icon' /> Assign Task</button>

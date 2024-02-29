@@ -32,6 +32,10 @@ body {
 
 /* Main App */
 
+.wrapper {
+  width: 100%;
+}
+
 /* Signup */
 
 .sign-up {
@@ -462,4 +466,114 @@ body {
   font-size: 22px;
   color: #8E98A0;
   margin-top: 6px;
+}
+
+/* Dashboard */
+
+.dashboard {
+  padding: 11px 20px;
+  border-bottom: 1px solid #c8d8df;
+  background-color: #fcfdff;
+}
+
+.dashboard .filter-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard .filter-sec .filter-tabs button {
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  margin-right: 20px;
+  color: #697D8E;
+  position: relative;
+  font-weight: 500;
+}
+
+.dashboard .filter-sec .filter-tabs button.active {
+  color: #000;
+}
+
+.dashboard .filter-sec .filter-tabs button.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -15px;
+  background-color: #028f68;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.dashboard .filter-sec .filter-tabs button span {
+  color: #fff;
+  background-color: #028f68;
+  padding: 2px 3px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 11px;
+}
+
+.dashboard .filter-sec .filter-search-dropdowns {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.dashboard .filter-sec .filter-search-dropdowns .dropdowns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.dashboard .filter-sec .filter-search-dropdowns .search-container {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.dashboard .filter-sec .filter-search-dropdowns .search-container input {
+  width: 100%;
+  padding: 3px 4px 3px 32px;
+  box-sizing: border-box;
+  border: 1px solid #e1ebf4;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.dashboard .filter-sec .filter-search-dropdowns .search-container input::placeholder {
+  color: #A9B4C6;
+}
+
+.dashboard .filter-sec .filter-search-dropdowns .search-container .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 22px;
+}
+
+.dashboard .filter-sec .filter-search-dropdowns .dropdowns .dropdown .form-select {
+  padding: 2px 30px 2px 8px;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+.dashboard .filter-sec .filter-search-dropdowns .dropdowns .dropdown .form-select option {
+  font-size: 14px;
+}
+
+.dashboard .filter-sec .filter-search-dropdowns .dropdowns .dropdown .form-select:focus {
+  box-shadow: 0 0 0 0.25rem #08735562;
+}
+
+.dashboard .filter-sec .filter-search-dropdowns .clear {
+  font-size: 14px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background-color: #eaeaea;
+  color: #43536D;
+  border: 1px solid #e4ecf5;
 }

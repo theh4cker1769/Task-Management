@@ -4,6 +4,7 @@ import Signup from './authentication/Signup';
 import Sidebar from './navigation/Sidebar';
 import { Route, Routes } from 'react-router-dom';
 import Header from './navigation/Header';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 function App() {
   // write a function for the button click
@@ -15,10 +16,12 @@ function App() {
       {/* <Signup/> */}
       <div className="main d-flex">
         <Sidebar />
-        <Header />
-        <Routes>
-          <Route path="/" /> {/* 👈 Renders at /app/ */}
-        </Routes>
+        <div className="wrapper">
+          <Header />
+          <Routes>
+            <Route path="my-dashboard" element={<Dashboard />} /> {/* 👈 Renders at /app/ */}
+          </Routes>
+        </div>
       </div>
     </>
   );
